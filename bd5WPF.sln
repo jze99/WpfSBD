@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bd5WPF", "bd5WPF.csproj", "{144C15C8-B027-486E-B2E4-BD953EFD625A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Debug|x64.ActiveCfg = Debug|x64
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Debug|x64.Build.0 = Debug|x64
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Release|x64.ActiveCfg = Release|x64
+		{144C15C8-B027-486E-B2E4-BD953EFD625A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EE698F6-8420-4036-ADBC-FC1138EC8B4C}
+	EndGlobalSection
+EndGlobal

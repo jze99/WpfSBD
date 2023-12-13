@@ -1,0 +1,206 @@
+﻿<Window x:Class="bd5WPF.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bd5WPF"
+        mc:Ignorable="d"
+        Title="Лучшая группа" Height="500" Width="800">
+    <Grid Background="#372727" Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button
+            Background="#7a4f48"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            x:Name="сreate" 
+            Content="Создать" 
+            HorizontalAlignment="Center" 
+            Height="70"
+            Width="134"
+            Margin="10,80,10,0" 
+            VerticalAlignment="Top"  
+            FontSize="24" 
+            FontFamily="Times New Roman" 
+            Click="Create_Click"
+            Visibility="Visible"/>
+        <Button
+            Background="#7a4f48"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            x:Name="change" 
+            Content="Изменить" 
+            HorizontalAlignment="Center" 
+            Height="70"
+            Width="133"
+            Margin="10,180,10,0" 
+            VerticalAlignment="Top"  
+            FontSize="24" 
+            FontFamily="Times New Roman" 
+            Click="Change_Click"
+            Visibility="Visible"/>
+        <Button
+            Background="#7a4f48"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            x:Name="remove" 
+            Content="Удалить" 
+            HorizontalAlignment="Center" 
+            Height="70"
+            Width="133"
+            Margin="10,280,10,0" 
+            VerticalAlignment="Top"  
+            FontSize="24" 
+            FontFamily="Times New Roman" 
+            Click="Delite_Button"
+            Visibility="Visible"/>
+
+
+
+        <DataGrid 
+            Grid.Column="1"
+            Name="DataGrid1"
+            HorizontalAlignment="Stretch"
+            Width="633"
+            Margin="0,10,0,50"
+            FontFamily="Times New Roman"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Foreground="#decdaf"
+            SelectionMode="Single"
+            SelectionUnit="FullRow"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            IsEnabled="True"
+            FontSize="18"
+            SelectionChanged="DataGrid1_SelectionChanged">
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#7a4f48" />
+                            <Setter Property="Foreground" Value="#decdaf" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#7a4f48"/>
+                    <Setter Property="Foreground" Value="#decdaf"/>
+                    <Setter Property="FontSize" Value="18"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </DataGrid.RowStyle>
+
+        </DataGrid>
+
+        <Label 
+            Name="tabl1"
+            Grid.Column="1"
+            Margin="10,420,10,10"
+            FontSize="24" 
+            FontFamily="Times New Roman"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            Visibility="Visible"
+            Content="П-340"/>
+        <Label 
+            Name="tabl2"
+            Grid.Column="1"
+            Margin="10,420,10,10"
+            FontSize="24" 
+            FontFamily="Times New Roman"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            Visibility="Collapsed"
+            Content="text"/>
+
+        <Button
+            Grid.Column="1"
+            Background="#7a4f48"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            x:Name="left" 
+            Content="☛" 
+            HorizontalAlignment="Left" 
+            Height="30"
+            Width="135"
+            Margin="500,420,0,0" 
+            VerticalAlignment="Top"  
+            FontSize="25" 
+            FontFamily="Times New Roman" 
+            Click="SwipeRight"
+            Visibility="Visible" />
+        <Button
+            Grid.Column="1"
+            Background="#7a4f48"
+            Foreground="#decdaf"
+            BorderBrush="Transparent"
+            x:Name="right" 
+            Content="☚" 
+            HorizontalAlignment="Left" 
+            Height="30"
+            Width="135"
+            Margin="360,420,0,0" 
+            VerticalAlignment="Top"  
+            FontSize="25" 
+            FontFamily="Times New Roman" 
+            Click="SwipeLeft"
+            Visibility="Visible" />
+        <DataGrid 
+            Grid.Column="1"
+            x:Name="DataGrid2"
+            Width="633"
+            Margin="10,10,10,50"
+            FontFamily="Times New Roman"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Foreground="#decdaf"
+            SelectionMode="Single"
+            SelectionUnit="FullRow"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            IsEnabled="True"
+            FontSize="18"
+            SelectionChanged="DataGrid1_SelectionChanged">
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#7a4f48"/>
+                    <Setter Property="Foreground" Value="#decdaf"/>
+                    <Setter Property="FontSize" Value="18"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#7a4f48" />
+                            <Setter Property="Foreground" Value="#decdaf" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </DataGrid.RowStyle>
+
+        </DataGrid>
+
+    </Grid>
+</Window>
